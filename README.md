@@ -52,9 +52,7 @@ Each `CaCert` provide the following fields:
 | outbound           | Flag indicating whether this certificate is used for outbound SSL connections when invoking the virtualized API.                  | true  |
 
 ## Limitations/Caveats
-- API-Method-Level description is not yet supported
-- Deep merge of stage-config files isn't supported
-- Support for WSDL is still Beta
+Nothing known
 
 ## Contributing
 
