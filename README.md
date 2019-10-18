@@ -2,11 +2,11 @@
 This policy can be used to access the configured certificates for the called API in a Custom-Policy.
 
 This asset doesn't really contain the policy itself. Instead it contains the important Script code. Ultimately you need to the
-following into filters into your policy:
-misc\images\SampleRequestPolicy.png
-
-The first filter is accessing the KPS to load the CaCertsBlob from the database for the actually called API:
-misc\images\AccessFEAPICaCerts.png
+following into filters into your policy:  
+![Policy snippet](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/SampleRequestPolicy.png)
+  
+The first filter is accessing the KPS to load the CaCertsBlob from the database for the actually called API:  
+![Get Certs from KPS](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/AccessFEAPICaCerts.png)
 
 As a second step add a Scripting filter with the folowing code:
 ```groovy
@@ -29,12 +29,16 @@ def invoke(msg)
         return true;
 }
 ```
-This gives you a List<CACert> attribute under the key: caCerts, which you can use to iterate.
+The scripting should look like: 
 
-The `CaCert` entries do provide the following fields:  
+![Get Certs from KPS](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/DecodeCertificates.png)  
+
+This gives you a List\<CACert\> attribute under the key: `caCerts`, which you can use to iterate.  
+  
+Each `CaCert` provide the following fields:  
 
 | Field              | Summary               | Sample |
-| :---               | :---                  | :---:  |
+| :---               | :---                  | :---   |
 | alias              | Certificate alias                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
 | subject            | Certificate subject                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
 | issuer             | Certificate issuer                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
@@ -46,3 +50,22 @@ The `CaCert` entries do provide the following fields:
 | notYetValid        | Flag indicating whether or not the certificate is valid yet.                  | false  |
 | inbound            | Flag indicating whether this certificate is used for inbound SSL connections when invoking the virtualized API.                  | false  |
 | outbound           | Flag indicating whether this certificate is used for outbound SSL connections when invoking the virtualized API.                  | true  |
+
+## Limitations/Caveats
+- API-Method-Level description is not yet supported
+- Deep merge of stage-config files isn't supported
+- Support for WSDL is still Beta
+
+## Contributing
+
+Please read [Contributing.md](https://github.com/Axway-API-Management-Plus/Common/blob/master/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.  
+
+## Team
+
+![alt text][Axwaylogo] Axway Team
+
+[Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
+
+
+## License
+[Apache License 2.0](/LICENSE)
