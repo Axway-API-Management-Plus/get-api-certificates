@@ -32,16 +32,16 @@ def invoke(msg)
 This gives you a List<CACert> attribute under the key: caCerts, which you can use to iterate.
 
 The `CaCert` entries do provide the following fields:
-| Field         | Summary               | Sample |
-| :---          | :---                  | :---:  |
-| `alias`          | Certificate alias                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
-| `subject`          | Certificate subject                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
-| `issuer`          | Certificate issuer                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
-| `version`          | Version of the certificate                  | 3  |
-| `notValidBefore`   | Start date of the certificate                  | 1364287486876  |
-| `notValidAfter`   | Expiry date of the certificate                  | 1364287486876  |
-| `signatureAlgorithm`   | The algorithm used to sign the certificate                  | RSA (2048 bits)  |
-| `expired`   | Flag indicating whether or not the certificate is expired                  | true  |
-| `notYetValid`   | Flag indicating whether or not the certificate is valid yet.                  | false  |
-| `inbound`   | Flag indicating whether this certificate is used for inbound SSL connections when invoking the virtualized API.                  | false  |
-| `outbound`   | Flag indicating whether this certificate is used for outbound SSL connections when invoking the virtualized API.                  | true  |
+| Field              | Summary               | Sample |
+| :---               | :---                  | :---:  |
+| alias              | Certificate alias                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
+| subject            | Certificate subject                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
+| issuer             | Certificate issuer                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
+| version            | Version of the certificate                  | 3  |
+| notValidBefore     | Start date of the certificate                  | 1364287486876  |
+| notValidAfter      | Expiry date of the certificate                  | 1364287486876  |
+| signatureAlgorithm | The algorithm used to sign the certificate                  | RSA (2048 bits)  |
+| expired            | Flag indicating whether or not the certificate is expired                  | true  |
+| notYetValid        | Flag indicating whether or not the certificate is valid yet.                  | false  |
+| inbound            | Flag indicating whether this certificate is used for inbound SSL connections when invoking the virtualized API.                  | false  |
+| outbound           | Flag indicating whether this certificate is used for outbound SSL connections when invoking the virtualized API.                  | true  |
