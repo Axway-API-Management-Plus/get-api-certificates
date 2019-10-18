@@ -39,6 +39,8 @@ Each `CaCert` provide the following fields:
 
 | Field              | Summary               | Sample |
 | :---               | :---                  | :---   |
+
+| certBlob           | Raw certificate data                  | YmxvYg==  |
 | alias              | Certificate alias                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
 | subject            | Certificate subject                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
 | issuer             | Certificate issuer                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
