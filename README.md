@@ -31,7 +31,8 @@ def invoke(msg)
 ```
 This gives you a List<CACert> attribute under the key: caCerts, which you can use to iterate.
 
-The `CaCert` entries do provide the following fields:
+The `CaCert` entries do provide the following fields:  
+
 | Field              | Summary               | Sample |
 | :---               | :---                  | :---:  |
 | alias              | Certificate alias                  | CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US  |
