@@ -6,7 +6,8 @@ following into filters into your policy:
 ![Policy snippet](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/SampleRequestPolicy.png)
   
 The first filter is accessing the KPS to load the CaCertsBlob from the database for the actually called API:  
-![Get Certs from KPS](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/AccessFEAPICaCerts.png)
+![Get Certs from KPS](https://github.com/Axway-API-Management-Plus/get-api-certificates/blob/master/misc/images/AccessFEAPICaCerts.png)  
+This is the selector: `${kps.PortalVirtualizedAPI[api.id].caCertsBlob}`  
 
 As a second step add a Scripting filter with the folowing code:
 ```groovy
